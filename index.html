@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SmartServices</title>
+  <meta name="Description" content="SmartServices é um plataforma web que disponibiliza aos utilizadores a possibilidade de encontrarem o melhor preço para serviços necessários.">
+  <meta name="Keywords" content="Serviços, servicos baratos, servicos rapidos">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <link rel=icon href=template/img/favicon.jpg sizes="40x40" type="image/jpg">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.1/css/bootstrap-slider.min.css" />
+  <link rel="stylesheet" href="template/font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="template/css/galery.css">
+  <link rel="stylesheet" href="template/css/styles.css">
+  <!-- 1. Load libraries -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="template/js/main.js"></script>
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <!-- 2. Configure SystemJS -->
+  <script src="systemjs.config.js"></script>
+
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+  </script>
+
+</head>
+<body>
+  <my-app>Loading...</my-app>
+</body>
+</html>

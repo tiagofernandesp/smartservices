@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+body{
+ font-family: 'Roboto', sans-serif;
+ font-size: 15px;
+ letter-spacing: 1px;
+ color: #2b2b2b;
+}
+
+/*Header*/
+ul{
+    margin: 0;
+    padding: 0;
+}
+.a-center{
+    text-align: center;
+}
+.menu-bar{
+    position: fixed;
+    width: 100%;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+}
+.bg-color-menu{
+    background-color: #212121;
+    z-index: 9999;
+}
+.nav-bar{
+    height: 80px;
+    margin: 0 Calc(50% - 500px);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.animation-menu{
+    width: 100%;
+    margin: 0;
+    padding: 0 70px;
+    top: 0;
+    left: 0;
+}
+.nav-bar .logo{
+ float: left;
+ max-height: 70px;
+ padding-top: 15px;
+}
+.nav-bar ul{
+    float: right;
+}
+.nav-bar ul li{
+    float: left;
+    list-style-type: none;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 31px 10px;
+    color: #fff;
+    float: left;
+}
+.nav-bar ul li a:hover, .nav-bar ul li a.active{
+    color: #75c2af  ;
+}
+.header{
+    background-image: url(../img/bannertop.jpg);
+    background-size: 1920px;
+    background-position-x: 50%;
+    background-image: url(../img/bannertop.jpg);
+    border-bottom: 20px solid #4e5d73;    
+}
+.bg-color-dark{
+ background-color: rgba(0, 0, 0, 0.5);
+ height: 100%;
+}
+.header-titulo{
+    color: #fff;
+    font-size: 56px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 200px;
+}
+.header-texto{
+    color: #75c2af;
+    font-size: 22px;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.btn-sobre-nos{
+    text-decoration: none;
+    padding: 15px 25px;
+    border: 2px solid #4e5d73;
+    color: #fff;
+    font-size: 23px;
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-top: 20px;
+    display: inline-block;
+}
+.btn-sobre-nos:hover, .btn-sobre-nos:active{
+    border: 2px solid #4e5d73;
+    background-color: #4e5d73;
+    text-decoration: none;
+    color: #fff;
+}
+.center{
+    text-align: center;
+}
+.line-banner{
+    height: 70px;
+    width: 2px;
+    display: block;
+    position: relative;
+    margin: auto;
+    background-color: #4e5d73;
+}
+.titulo-principal{
+    font-size: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    position: relative;
+    text-align: center;
+    line-height: 43px;
+    margin: 0;
+}
+.titulo-principal span:after{
+   content:' ';
+   display:block;
+   border:1px solid #75c2af;
+   width: 50%;
+   margin: auto;
+}
+.titulo-principal span{
+   display: inline-table;
+}
+.texto-normal{
+    line-height: 30px;
+}
+img.indeximg1{
+    margin-top: 145px;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+img.indeximg2{
+    width: 86.5%;
+    margin-bottom: 50px;
+    max-width: 100%;
+}
+.sig-index{
+
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.sig-pessoa{
+    background-image: url("../img/pessoa.jpg");
+}
+.sig-empresa{
+    background-image: url("../img/empresa.jpg");
+}
+.titulo-segundario{
+    font-size: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    position: relative;
+    text-align: center;
+    line-height: 43px;
+    margin: 0;
+}
+.sig-index p{
+    padding: 0 20%;
+    font-weight: 600;
+}
+.sig-index a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #337ab7;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.sig-index a:hover,.sig-index a:active{
+    background-color: #4e5d73;
+}
+
+/*Footer*/
+.footer{
+    background-color: #212121;
+    color: #fff;
+    padding: 30px 0;
+}
+.footer1{
+    background-color: #4e5d73;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+.f1-titulo{
+    font-size: 30px;
+}
+.f1-texto{
+
+}
+.rede-sociais{
+    padding-bottom: 20px;
+}
+.rede-sociais li{
+    display: inline-block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    margin: 0 5px;
+    transition: all 0.5s;
+}
+.rede-sociais li i{
+    font-size:20px;
+    line-height: 52px;
+}
+.rede-sociais .fac:hover{
+   background-color: #3b5998;
+}
+.rede-sociais .ins:hover{
+   background-color: #bc2a8d;
+}
+.rede-sociais .you:hover{
+   background-color: #bb0000;
+}
+.rede-sociais .twi:hover{
+   background-color: #00aced;
+}
+
+/*FAQ*/
+.fa-res{
+    font-size: 13px;
+    transition: all 1s ease-out;
+    opacity: 0; 
+    max-height: 0;
+    overflow: hidden;
+    
+}
+.fa-perg{
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 15px;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+.active .fa-res{
+    opacity: 1;
+    max-height: 100px;
+}
+.fa-perg:before {
+    content: "\f105";
+    font-size: 20px;
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-right: 10px;
+    height: inherit;
+    text-align: left;
+    line-height: inherit;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    transition: all 0.6s;
+}
+.fa-perg.active:before {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.nav-bar .menu-user{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.nav-bar .menu-user li a{
+   color: #000;
+   padding: 10px 20px 10px 20px;
+   min-width: 205px;
+   line-height: 18px;
+   font-size: 12px;
+}
+.nav-bar .menu-user li a i{
+   font-size: 16px;
+   line-height: 16px;
+   width: 18px;
+}
+.nav-bar .menu-user .divider{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    display: inline-block;
+    width: 80%;
+    margin: 16px 10%;
+}

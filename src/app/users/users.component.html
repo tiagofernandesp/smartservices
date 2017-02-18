@@ -1,0 +1,15 @@
+<template [ngIf]="UsersService.logged">
+  <li class="dropdown" style="padding-left: 30px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Olá, {{UsersService.currentUser.nome}} <b class="caret"></b></a>
+<ul class="dropdown-menu menu-user">
+    <li><a href="/user/preferences"><i class="fa fa-cog" aria-hidden="true"></i> Preferências</a></li>
+    <li><a href="/help/support"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contactar Suporte</a></li>
+    <li class="divider"></li>
+    <li><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a></li>
+  </ul>
+</li>
+</template>
+
+<template [ngIf]="!UsersService.logged">
+  <li class="dropdown" style="padding-left: 30px;"><a href="/login"><i class="fa fa-cog" aria-hidden="true"></i> Login</a>
+</li>
+</template>
