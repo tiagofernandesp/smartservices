@@ -1,13 +1,13 @@
 <header-component></header-component>
 
 <div class="container" style="padding-top: 50px;">
-<ng2-slider
-        #range
-        min="6"
-        max="23"
-        startValue="9"
-        endValue="21"
-        (onRangeChanged)="rangeValueChanged($event, 'range-1-start', 'range_1_end')">
+    <ng2-slider
+    #range
+    min="6"
+    max="23"
+    startValue="9"
+    endValue="21"
+    (onRangeChanged)="rangeValueChanged($event, 'range-1-start', 'range_1_end')">
 </ng2-slider>
 <p class="value-box">
     Values: <span class="value-span" id="range-1-start">9</span> - <span class="value-span" id="range-1-end">21</span>
@@ -15,136 +15,163 @@
 
 <form (submit)="addServico($event)">
     <div class="row">
-    <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-            <label for="categoria">Categoria: </label><br>
-            <select class="form-control" name="categoria" id="categoria" [(ngModel)]="categoria">
-            <option value="Construção">Construção</option>
-            <option value="option-2">Option 2</option>
+        <div class="col-xs-12 col-sm-6">
+            <div class="form-group">
+                <label for="categoria">Categoria: </label><br>
+                <select class="form-control" name="categoria" id="categoria" [(ngModel)]="categoria">
+                    <option value="">Nenhum</option>
+                    <option>Técnicos</option>
+                    <option>Domésticos</option>
+                    <option>Reparações e Mudanças</option>
+                    <option>Eventos</option>
+                    <option>Saúde e Beleza</option>
+                </select>  
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+           <div class="form-group">
+            <label for="subcategoria">Sub. Categoria: </label><br>
+            <select class="form-control" name="subcategoria" id="subcategoria" [(ngModel)]="subcategoria">
+                <option value="">Nenhum</option>
+                <option>Serviços de Advocacia</option>
+                <option>Serviços Financeiros</option>
+                <option>Serviços Informáticos</option>
+                <option>Agências Publicitária e Marketing</option>
+                <option>Acompanhantes de Idosos</option>
+                <option>Infantários</option>
+                <option>Limpezas</option>
+                <option>Apoio a Animais de Estimação</option>
+                <option>Transportes de Mudanças</option>
+                <option>Serviços Auto</option>
+                <option>Eletricistas</option>
+                <option>Canalizadores</option>
+                <option>Obras e Manutenção</option>
+                <option>Reparações de Eletrodomésticos</option>
+                <option>Espaços para Eventos</option>
+                <option>Animações de Festas</option>
+                <option>Catering e Culinária</option>
+                <option>Fotógrafos</option>
+                <option>Estética</option>
+                <option>Saúde e Enfermagem</option>
+                <option>Terapias e Massagens</option>
+                <option>Dentistas</option>
+                <option>Nutrição</option>
+                <option>Cabeleireiros</option>
+                <option>Ginásios</option>
             </select>  
         </div>
     </div>
-    <div class="col-xs-12 col-sm-6">
-     <div class="form-group">
-        <label for="subcategoria">Sub. Categoria: </label><br>
-        <select class="form-control" name="subcategoria" id="subcategoria" [(ngModel)]="subcategoria">
-        <option value="">Nenhum</option>
-        <option value="Construção">Construção</option>
-        <option value="option-2">Option 2</option>
-        </select>  
-    </div>
-    </div>
-    </div>
-    <div class="row">
+</div>
+<div class="row">
     <div class="col-xs-12 col-sm-4">
-    <div class="form-group">
-        <label for="titulo">Titulo</label>
-        <input type="text" [(ngModel)]="titulo" name="titulo" class="form-control" placeholder="Titulo">
-    </div>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-    <div class="form-group">
-        <label for="preco">Valor</label>
-        <div class="input-group">
-         <div class="input-group-addon">€</div>
-      <input type="number" [(ngModel)]="preco" name="preco" class="form-control" placeholder="Valor">
-      <div class="input-group-addon">.00</div>
+        <div class="form-group">
+            <label for="titulo">Titulo</label>
+            <input type="text" [(ngModel)]="titulo" name="titulo" class="form-control" placeholder="Titulo">
         </div>
     </div>
-    </div>
     <div class="col-xs-12 col-sm-4">
-     <div class="form-group">
+        <div class="form-group">
+            <label for="preco">Valor</label>
+            <div class="input-group">
+               <div class="input-group-addon">€</div>
+               <input type="number" [(ngModel)]="preco" name="preco" class="form-control" placeholder="Valor">
+               <div class="input-group-addon">.00</div>
+           </div>
+       </div>
+   </div>
+   <div class="col-xs-12 col-sm-4">
+       <div class="form-group">
         <label for="user">User</label>
         <input type="text" [(ngModel)]="user" name="user" class="form-control" placeholder="User">
     </div>
-    </div>
-    </div>
-    <div class="row">
+</div>
+</div>
+<div class="row">
     <div class="col-xs-12">
-    <div class=" form-group">
-        <label for="corpo">Corpo</label>
-        <textarea class="form-control" rows="6" [(ngModel)]="corpo" name="corpo" class="form-control" placeholder="Corpo"></textarea>
+        <div class=" form-group">
+            <label for="corpo">Corpo</label>
+            <textarea class="form-control" rows="6" [(ngModel)]="corpo" name="corpo" class="form-control" placeholder="Corpo"></textarea>
+        </div>
     </div>
-    </div>
-    </div>
-    <div class="row">
+</div>
+<div class="row">
     <div class="col-xs-12">
-    <button class="btn btn-default" type="submit">Adicionar</button>
+        <button class="btn btn-default" type="submit">Adicionar</button>
     </div>
-    </div>
+</div>
 </form>
 
 <br><br>
 <div class="servicos list">
     <div class="container">
-    <br><br>
-    <label>Search: <input [(ngModel)]="fpreco"></label>
-    <div class="row">
+        <br><br>
+        <label>Search: <input [(ngModel)]="fpreco"></label>
+        <div class="row">
         <!--<div class="col-xs-12">
             <ng2-slider skin="elegance-2" min="6" max="23" ></ng2-slider>
         </div>-->
         <div class="col-xs-12 col-sm-6">
-        <div class="form-group">
-            <label for="fcategoria">Categoria: </label><br>
-            <select class="form-control" name="fcategoria" id="fcategoria" [(ngModel)]="fcategoria">
-            <option value="">Nenhum</option>
-            <option value="Construção">Construção</option>
-            <option value="option-2">Option 2</option>
+            <div class="form-group">
+                <label for="fcategoria">Categoria: </label><br>
+                <select class="form-control" name="fcategoria" id="fcategoria" [(ngModel)]="fcategoria">
+                    <option value="">Nenhum</option>
+                    <option value="Construção">Construção</option>
+                    <option value="option-2">Option 2</option>
+                </select>  
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+           <div class="form-group">
+            <label for="fsubcategoria">Sub. Categoria: </label><br>
+            <select class="form-control" name="fsubcategoria" id="fsubcategoria" [(ngModel)]="fsubcategoria">
+                <option value="Construção">Construção</option>
+                <option value="option-2">Option 2</option>
             </select>  
         </div>
     </div>
-    <div class="col-xs-12 col-sm-6">
-     <div class="form-group">
-        <label for="fsubcategoria">Sub. Categoria: </label><br>
-        <select class="form-control" name="fsubcategoria" id="fsubcategoria" [(ngModel)]="fsubcategoria">
-        <option value="Construção">Construção</option>
-        <option value="option-2">Option 2</option>
-        </select>  
-    </div>
-    </div>
-    </div>
-    <div class="col-xs-12">{{fpreco}}</div>
-     <div class="col-xs-12">{{fsubcategoria}}</div>
-      <div class="col-xs-12">{{fcategoria}}</div>
-    <br><br>
 </div>
-    <div *ngFor="let servico of servicos | filter:[fcategoria,fsubcategoria]">
-        <div class="well">
+<div class="col-xs-12">{{fpreco}}</div>
+<div class="col-xs-12">{{fsubcategoria}}</div>
+<div class="col-xs-12">{{fcategoria}}</div>
+<br><br>
+</div>
+<div *ngFor="let servico of servicos | filter:[fcategoria,fsubcategoria]">
+    <div class="well">
       <div class="media">
-  		<a class="pull-left" href="#">
-    		<img class="media-object" src="https://maxcdn.icons8.com/Share/icon/Business//work1600.png" style="width: 150px;height: 150px;">
-  		</a>
-  		<div class="media-body">
-    		<h4 class="media-heading">{{servico.titulo}}</h4>
+        <a class="pull-left" href="#">
+          <img class="media-object" src="https://maxcdn.icons8.com/Share/icon/Business//work1600.png" style="width: 150px;height: 150px;">
+      </a>
+      <div class="media-body">
+          <h4 class="media-heading">{{servico.titulo}}</h4>
           <p class="text-right">By {{servico.user}}</p>
           <p>{{servico.categoria}} - {{servico.subcategoria}} | Preço:{{servico.preco}}€</p>
           <p>{{servico.corpo}}</p>
           <ul class="list-inline list-unstyled">
-  			<li><span><i class="glyphicon glyphicon-calendar"></i> 2 dias, 8 horas </span></li>
-            <li>|</li>
-            <span><i class="glyphicon glyphicon-comment"></i> 2 comentarios</span>
-            <li>|</li>
-            <li>
-               <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
-            </li>
-            <li>|</li>
-            <li>
-              <span><i class="fa fa-facebook-square"></i></span>
-              <span><i class="fa fa-twitter-square"></i></span>
-              <span><i class="fa fa-google-plus-square"></i></span>
-            </li>
-			</ul>
-       </div>
-    </div>
-  </div>
+           <li><span><i class="glyphicon glyphicon-calendar"></i> 2 dias, 8 horas </span></li>
+           <li>|</li>
+           <span><i class="glyphicon glyphicon-comment"></i> 2 comentarios</span>
+           <li>|</li>
+           <li>
+             <span class="glyphicon glyphicon-star"></span>
+             <span class="glyphicon glyphicon-star"></span>
+             <span class="glyphicon glyphicon-star"></span>
+             <span class="glyphicon glyphicon-star"></span>
+             <span class="glyphicon glyphicon-star-empty"></span>
+         </li>
+         <li>|</li>
+         <li>
+          <span><i class="fa fa-facebook-square"></i></span>
+          <span><i class="fa fa-twitter-square"></i></span>
+          <span><i class="fa fa-google-plus-square"></i></span>
+      </li>
+  </ul>
+</div>
+</div>
+</div>
 
-            <input type="button" (click)="deleteServico(servico._id)" value="Delete" class="btn btn-danger">
-        <br><br>
-    </div>
+<input type="button" (click)="deleteServico(servico._id)" value="Delete" class="btn btn-danger">
+<br><br>
+</div>
 </div>
 </div>
 

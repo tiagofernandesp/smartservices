@@ -1,13 +1,13 @@
 <header-component></header-component>
 <div class="container" style="padding-top: 20px;padding-bottom: 50px;">
 <div class="col-xs-12" style="color: red;padding-top: 15px;padding-bottom: 15px;text-align: center;">{{this.authService.logError}}</div>
-<h4>Login to site.com</h4>
+<h4>Login em SmartService</h4>
               <div class="row">
                   <div class="col-xs-12 col-sm-6" style="padding-top: 20px;">
                       <div class="well">
                           <form  (submit)="onSignin($event)" novalidate="novalidate">
                               <div class="form-group">
-                                  <label for="username" class="control-label">Username</label>
+                                  <label for="username" class="control-label">Utilizador</label>
                                   <input type="text" class="form-control" id="username" name="username"  [(ngModel)]="nome" required="" title="Please enter you username" placeholder="Coloque o seu username">
                                   <span class="help-block"></span>
                               </div>
@@ -19,26 +19,25 @@
                               <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
                               <div class="checkbox">
                                   <label>
-                                      <input type="checkbox" name="remember" id="remember"> Remember login
+                                      <input type="checkbox" name="remember" id="remember"> Lembrar login
                                   </label>
-                                  <p class="help-block">(if this is a private computer)</p>
+                                  <p class="help-block">(se for computador privado)</p>
                               </div>
                               <button type="submit" class="btn btn-success btn-block">Login</button>
-                              <a href="/forgot/" class="btn btn-default btn-block">Help to login</a>
+                              <a href="/forgot/" class="btn btn-default btn-block">Esqueceste-te da tua password?</a>
                           </form>
                       </div>
                   </div>
                   <div class="col-xs-12 col-sm-6" style="padding-top: 20px;">
-                      <p class="lead">Register now for <span class="text-success">FREE</span></p>
+                      <p class="lead">Registo <span class="text-success">GRÁTIS</span></p>
                       <ul class="list-unstyled" style="line-height: 2">
-                          <li><span class="fa fa-check text-success"></span> See all your orders</li>
-                          <li><span class="fa fa-check text-success"></span> Fast re-order</li>
-                          <li><span class="fa fa-check text-success"></span> Save your favorites</li>
-                          <li><span class="fa fa-check text-success"></span> Fast checkout</li>
-                          <li><span class="fa fa-check text-success"></span> Get a gift <small>(only new customers)</small></li>
-                          <li><a href="/registar/"><u>Read more</u></a></li>
+                          <li><span class="fa fa-check text-success"></span> Poupa tempo</li>
+                          <li><span class="fa fa-check text-success"></span> Poupa dinheiro</li>
+                          <li><span class="fa fa-check text-success"></span> Respostas personalizadas</li>
+                          <li><span class="fa fa-check text-success"></span> Diversas empresas <small></small></li>
+                          <li><a href="/registar/"><u>Ver Mais</u></a></li>
                       </ul>
-                      <p><a href="/registar/" class="btn btn-info btn-block">Yes please, register now!</a></p>
+                      <p><a href="/registar/" class="btn btn-info btn-block">Registar-me agora!</a></p>
                   </div>
               </div>
 </div>
